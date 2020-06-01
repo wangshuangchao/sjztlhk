@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.css"/>
+	<!--引用百度地图API-->
+	<style type="text/css">
+	    html,body{margin:0;padding:0;}
+	    .iw_poi_title {color:#CC5522;font-size:14px;font-weight:bold;overflow:hidden;padding-right:13px;white-space:nowrap}
+	    .iw_poi_content {font:12px arial,sans-serif;overflow:visible;padding-top:4px;white-space:-moz-pre-wrap;word-wrap:break-word}
+	</style>
+	<script type="text/javascript" src="http://api.map.baidu.com/api?key=&v=1.1&services=true"></script>
+	
+	<script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+	<script src="js/bootstrap.js"></script>
+	<link rel="stylesheet" href="css/index.css">
+	<script src="js/index.js"></script>
+	<body>
+	<!--顶部导航-->
+	<div class="nav navbar my_top navbar-fixed-top">
+		<img src="images/logo.png" alt="" class="pull-left col-xs-6">
+		<ul class="nav navbar-default nav-justified text-center hidden-md hidden-sm hidden-xs">
+			<li><a href="index.html">首页</a></li>
+			<li>
+				<a href="javascript:void(0)">学校概况</a>
+				<ul class="list-unstyled nav myHover">
+					<li><a href="survey.html">学校介绍</a></li>
+					<li><a href="course.html">课程设置</a></li>
+				</ul>
+			</li>
+			<li>
+				<a href="javascript:void(0)">招生就业</a>
+				<ul class="list-unstyled nav myHover">
+					<li><a href="recruitement.html">招生简章</a></li>
+					<li><a href="employment.html">就业保障</a></li>
+				</ul>
+			</li>
+			<li><a href="cadetStyle.html">学院风采</a></li>
+			<li><a href="new.html">新闻公告</a></li>
+			<li><a href="contect.html">联系我们</a></li>
+			<li class="my_search">
+				<input type="text" class="form-control form-inline" />
+				<span class="glyphicon glyphicon-search"></span>
+			</li>
+		</ul>
+		<img src="images/btn.png" class="pull-right hidden-lg my_navClick"/>
+	</div>
+	<!--弹出导航-->
+	<div class="my_navLeft">
+		<ul class="nav navbar nav-pills nav-stacked">
+			<li>
+				<img class="nav_exit pull-right" src="images/nav_exit.png" alt="">
+			</li>
+			<li class="active">
+				<a href="index.html">
+					<img src="images/nav_home.png" alt="">
+					首页
+				</a>
+			</li>
+			<li>
+				<a href="javscript:void(0)">
+					<img src="images/nav_profile.png" alt="">
+					学校概况
+					<img class="my_down" src="images/nav_down.png" alt="">
+				</a>
+			</li>
+			<ul class="nav my_nav_down">
+				<li><a href="survey.html">学校介绍</a></li>
+				<li><a href="course.html">课程设置</a></li>
+			</ul>
+			<li>
+				<a href="javscript:void(0)">
+					<img src="images/nav_recAemp.png" alt="">
+					招生就业
+					<img class="my_down" src="images/nav_down.png" alt="">
+				</a>
+			</li>
+			<ul class="nav my_nav_down">
+				<li><a href="recruitement.html">招生简章</a></li>
+				<li><a href="employment.html">就业保障</a></li>
+			</ul>
+			</a>
+			<li>
+				<a href="cadetStyle.html">
+					<img src="images/nav_cadetStyle.png" alt="">
+					学院风采
+				</a>
+			</li>
+			<li>
+				<a href="new.html">
+					<img src="images/nav_new.png" alt="">
+					新闻公告
+				</a>
+			</li>
+			<li>
+				<a href="contect.html">
+				<img src="images/nav_contect.png" alt="">
+				联系我们
+				</a>
+			</li>
+			<li class="my_search">
+				<div class="form-group col-xs-10">
+					<input type="text" class="form-control  form-inline" />
+				</div>
+				<button class="btn col-xs-2">搜索</button>
+			</li>
+		</ul>
+	</div>
+	<div class="my_divider">
+		<p class="text-left">联系我们</p>
+	</div>
+	<div class="myData clearfix">
+		<div class="my_contect col-md-9">
+			<p class="h2 text-center">石家庄东方铁路航空学校</p>
+			<p class="my_header">学校北校区（高职部）地址</p>
+			<!--百度地图容器-->
+  			<div id="dituContent"></div>
+			<p class="h4">招生办电话：（0311）68092339</p>
+			<p class="h4">学院地址：石家庄桥西区三简路16号</p>
+			<p class="h4">乘车路线： 火车站西广场做9路、15路转乘61路南简良站下车即到</p>
+			<br />
+			<br />
+			<p class="my_header">在线报名</p>
+			<!--在线报名-->
+			<div class="row">
+				<div class="col-sm-6">
+					<p>姓名</p>
+					<input type="text"  class="form-control"/>
+					<p>年龄</p>
+					<input type="text"  class="form-control"/>
+					<p>联系电话</p>
+					<input type="text"  class="form-control"/>
+					<p>意向专业</p>
+					<input type="text"  class="form-control"/>
+					<br />
+					<button class="btn btn-success">在线报名</button>
+				</div>
+			</div>
+			<br />
+			<br />
+			<p class="my_header">招生咨询</p>
+			<br />
+			<p class="h4">招生办电话：（0311）68092339</p>
+			<p class="h4">X老师：123456789745</p>
+			<p class="h4">X老师：123456789745</p>
+		</div>
+		<!--右部悬浮框-->
+		<div class="fixRight col-md-3 hidden-xs hidden-sm">
+			<div class="form-group col-xs-10">
+				<input type="text" class="form-control"/>
+			</div>
+			<div class="form-group  col-xs-2">
+				<button class="btn btn-default btn-info">
+					<span class="glyphicon glyphicon-search"></span>
+				</button>	
+			</div>
+			<div class="myText">
+				<p class="h4">近期文章</p>
+				<ul class="list-unstyled">
+					<li><a href="javascript:void(0)">致升学班全体同学的一封信</a></li>
+					<li><a href="javascript:void(0)">【4.15全民国家安全教育日】国家安全，人人有责</a></li>
+					<li><a href="javascript:void(0)">定了！北京市中高考时间及初高三开学安排出炉</a></li>
+					<li><a href="javascript:void(0)">今日清明|缅怀逝者，致敬英雄！</a></li>
+					<li><a href="javascript:void(0)">4月4日，全国哀悼！关于“下半旗”的知识你需要了解</a></li>
+				</ul>
+				<p class="h4">联系我们</p>
+				<p>招生咨询：</p>
+				<p>X老师：123456789745</p>
+				<p>X老师：123456789745</p>
+			</div>
+		</div>
+	</div>
+	<!--底部导航-->
+	<div class="mybottom col-sm-12">
+		<ul class="text-center hidden-xs hidden-sm">
+			<li><a href="javascript:void(0)">首页</a></li>
+			<li><a href="javascript:void(0)">学校概况</a></li>
+			<li><a href="javascript:void(0)">招生就业</a></li>
+			<li><a href="javascript:void(0)">学院风采</a></li>
+			<li><a href="javascript:void(0)">新闻公告</a></li>
+			<li><a href="javascript:void(0)">联系我们</a></li>
+		</ul>
+		<p class="text-center">Copyright ©2017 .All Rights Reserved</p>
+		<p>咨询电话：13073135400 15633885777 0311-86770202</p>
+		<p>版权所有：河北梆梆信息技术有限公司     冀ICP备16028231号-2</p>
+	</div>
+	</body>
+</html>
+

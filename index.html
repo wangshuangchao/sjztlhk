@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.css"/>
+	<script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+	<script src="js/bootstrap.js"></script>
+	<link rel="stylesheet" href="css/index.css">
+	<script src="js/index.js"></script>
+</head>
+<body>
+	<!--顶部导航-->
+	<div class="nav navbar my_top navbar-fixed-top">
+		<img src="images/logo.png" alt="" class="pull-left col-xs-6">
+		<ul class="nav navbar-default nav-justified text-center hidden-md hidden-sm hidden-xs">
+			<li><a href="index.html">首页</a></li>
+			<li>
+				<a href="javascript:void(0)">学校概况</a>
+				<ul class="list-unstyled nav myHover">
+					<li><a href="survey.html">学校介绍</a></li>
+					<li><a href="course.html">课程设置</a></li>
+				</ul>
+			</li>
+			<li>
+				<a href="javascript:void(0)">招生就业</a>
+				<ul class="list-unstyled nav myHover">
+					<li><a href="recruitement.html">招生简章</a></li>
+					<li><a href="employment.html">就业保障</a></li>
+				</ul>
+			</li>
+			<li><a href="cadetStyle.html">学院风采</a></li>
+			<li><a href="new.html">新闻公告</a></li>
+			<li><a href="contect.html">联系我们</a></li>
+			<li class="my_search">
+				<input type="text" class="form-control form-inline" />
+				<span class="glyphicon glyphicon-search"></span>
+			</li>
+		</ul>
+		<img src="images/btn.png" class="pull-right hidden-lg my_navClick"/>
+	</div>
+	<!--弹出导航-->
+	<div class="my_navLeft">
+		<ul class="nav navbar nav-pills nav-stacked">
+			<li>
+				<img class="nav_exit pull-right" src="images/nav_exit.png" alt="">
+			</li>
+			<li class="active">
+				<a href="index.html">
+					<img src="images/nav_home.png" alt="">
+					首页
+				</a>
+			</li>
+			<li>
+				<a href="javscript:void(0)">
+					<img src="images/nav_profile.png" alt="">
+					学校概况
+					<img class="my_down" src="images/nav_down.png" alt="">
+				</a>
+			</li>
+			<ul class="nav my_nav_down">
+				<li><a href="survey.html">学校介绍</a></li>
+				<li><a href="course.html">课程设置</a></li>
+			</ul>
+			<li>
+				<a href="javscript:void(0)">
+					<img src="images/nav_recAemp.png" alt="">
+					招生就业
+					<img class="my_down" src="images/nav_down.png" alt="">
+				</a>
+			</li>
+			<ul class="nav my_nav_down">
+				<li><a href="recruitement.html">招生简章</a></li>
+				<li><a href="employment.html">就业保障</a></li>
+			</ul>
+			</a>
+			<li>
+				<a href="cadetStyle.html">
+					<img src="images/nav_cadetStyle.png" alt="">
+					学院风采
+				</a>
+			</li>
+			<li>
+				<a href="new.html">
+					<img src="images/nav_new.png" alt="">
+					新闻公告
+				</a>
+			</li>
+			<li>
+				<a href="contect.html">
+				<img src="images/nav_contect.png" alt="">
+				联系我们
+				</a>
+			</li>
+			<li class="my_search">
+				<div class="form-group col-xs-10">
+					<input type="text" class="form-control  form-inline" />
+				</div>
+				<button class="btn col-xs-2">搜索</button>
+			</li>
+		</ul>
+	</div>
+	<!--轮播图-->
+	<div id="banner" data-interval="5000" data-ride="carousel" class="carousel slide" >
+		<div class="carousel-inner">
+			<div class="item active">
+				<img src="images/back.png">
+				<div class="carousel-caption">
+					<p class="text-right">快乐学习，保障就业</p>
+					<p class="text-right">高端职业人才孵化基地</p>
+					<p class="text-right">
+						<a href="javascript:void(0)" class="btn btn-lg btn-primary" role="button">在线报名</a>
+					</p>
+				</div>
+			</div>
+			<div class="item">
+				<img src="http://www.hbbangcle.com/wp-content/uploads/revslider/Home1/fuygu_副本_副本.jpg">
+				<div class="carousel-caption">
+					<p class="text-right">快乐学习，保障就业</p>
+					<p class="text-right">高端职业人才孵化基地</p>
+					<p class="text-right">
+						<a href="javascript:void(0)" class="btn btn-lg btn-primary" role="button">在线报名</a>
+					</p>
+				</div>
+			</div>
+			<ul class="carousel-indicators">
+				<li data-target="#banner" data-slide-to="0" class="active"></li>
+				<li data-target="#banner" data-slide-to="1"></li>
+			</ul>
+		</div>
+		<!--<a href="#banner" data-slide="prev" class="carousel-control left"><</a>
+		<a href="#banner" data-slide="next" class="carousel-control right">></a>-->
+	</div>
+	<div class="myzhuanye container">
+		<p class="text-center myheader">学校专业</p>
+		<p class="text-center">共开设XX个专业课程</p>
+		<div class="row">
+			<div class="col-xs-6 col-md-4">
+				<div class="thumbnail">
+					<img class="img-rounded" src="images/1.jpg" alt="...">
+					<p class="text-center">铁道运输管理</p>
+				</div>
+			</div>
+			<div class="col-xs-6 col-md-4">
+				<div class="thumbnail">
+					<img class="img-rounded" src="images/2.jpg" alt="...">
+					<p class="text-center">铁道车辆运用与检修</p>
+				</div>
+			</div>
+			<div class="col-xs-6 col-md-4">
+				<div class="thumbnail">
+					<img class="img-rounded" src="images/3.jpg" alt="...">
+					<p class="text-center">会计专业</p>
+				</div>
+			</div>
+			<div class="col-xs-6 col-md-4">
+				<div class="thumbnail">
+					<img class="img-rounded" src="images/4.jpg" alt="...">
+					<p class="text-center">城市轨道交通运营管理</p>
+				</div>
+			</div>
+			<div class="col-xs-6 col-md-4">
+				<div class="thumbnail">
+					<img class="img-rounded" src="images/5.jpg" alt="...">
+					<p class="text-center">城市轨道交通车辆运用与检修</p>
+				</div>
+			</div>
+			<div class="col-xs-6 col-md-4">
+				<div class="thumbnail">
+					<img class="img-rounded" src="images/6.jpg" alt="...">
+					<p class="text-center">航空服务</p>
+				</div>
+			</div>
+		</div>	
+	</div>
+	<!--学校新闻-->
+	<div class="mynew">
+		<p class="myheader">学校新闻</p>
+		<p class="text-center">学校活动、师生风采、教学管理、常见问题</p>
+		<div class="container">
+			<div class="col-xs-12 col-md-4">
+				<img src="images/7.jpg" alt=""/>
+			</div>
+			<ul class="col-xs-12 col-md-4">
+				<li>12312312345345</li>
+				<li>12312312345345</li>
+				<li>12312312345345</li>
+				<li>12312312345345</li>
+				<li>12312312345345</li>
+				<li>12312312345345</li>
+			</ul>
+			<ul class="col-xs-12 col-md-4">
+				<li>12312312345345</li>
+				<li>12312312345345</li>
+				<li>12312312345345</li>
+				<li>12312312345345</li>
+				<li>12312312345345</li>
+				<li>12312312345345</li>
+			</ul>
+		</div>
+	</div>
+	<!--在线报名-->
+	<div class="mybaoming clearfix">
+		<p class="myheader">在线报名</p>
+		<div class="col-xs-12 col-sm-5 col-sm-push-1">
+			<p>东方铁路航空</p>
+			<p>交通业是国家的命脉，是国家发展的重要保证。根据十八大精神，中国建设“八横八纵”交通枢纽网，推动交通、经济发展，给同学们带来大量的就业机遇和岗位。中国一些一线二线城市为了赶上时代步伐、推进城市发展，建设地铁、高铁等现代交通方式。交通类专业的前景是灿烂辉煌的，交通类工作者是国家的必要也是必须人才。我校以培养国家实用型人才为宗旨，为实现中国伟大复兴为己任。</p>
+			<p>学院网址：http://www.dftlhk.com</p>
+			<p>0311-68092339</p>
+		</div>
+		<div class="col-xs-8 col-sm-4 col-sm-push-1">
+			<p>姓名</p>
+			<input type="text"  class="form-control"/>
+			<p>年龄</p>
+			<input type="text"  class="form-control"/>
+			<p>联系电话</p>
+			<input type="text"  class="form-control"/>
+			<p>意向专业</p>
+			<input type="text"  class="form-control"/>
+			<button class="btn btn-success">在线报名</button>
+		</div>
+	</div>
+	<!--学校环境-->
+	<div class="myhuanjing container">
+		<p class="myheader">学校环境</p>
+		<p class="text-center">石家庄铁路航空学校环境</p>
+		<div class="row">
+			<div class="col-xs-6 col-md-3">
+				<div class="thumbnail">
+					<img src="images/1.jpg" alt="...">
+				</div>
+			</div>
+			<div class="col-xs-6 col-md-3">
+				<div class="thumbnail">
+					<img src="images/2.jpg" alt="...">
+				</div>
+			</div>
+			<div class="col-xs-6 col-md-3">
+				<div class="thumbnail">
+					<img src="images/3.jpg" alt="...">
+				</div>
+			</div>
+			<div class="col-xs-6 col-md-3">
+				<div class="thumbnail">
+					<img src="images/4.jpg" alt="...">
+				</div>
+			</div>
+		</div>
+	</div>
+	<!--底部导航-->
+	<div class="mybottom">
+		<ul class="text-center hidden-xs hidden-sm">
+			<li><a href="javascript:void(0)">首页</a></li>
+			<li><a href="javascript:void(0)">学校概况</a></li>
+			<li><a href="javascript:void(0)">招生就业</a></li>
+			<li><a href="javascript:void(0)">学院风采</a></li>
+			<li><a href="javascript:void(0)">新闻公告</a></li>
+			<li><a href="javascript:void(0)">联系我们</a></li>
+		</ul>
+		<p class="text-center">Copyright ©2017 .All Rights Reserved</p>
+		<p>咨询电话：13073135400 15633885777 0311-86770202</p>
+		<p>版权所有：河北梆梆信息技术有限公司     冀ICP备16028231号-2</p>
+	</div>
+</body>
+</html>
